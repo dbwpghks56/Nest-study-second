@@ -4,11 +4,10 @@ import { MessagesRepository } from './messages.repository';
 
 @Injectable()
 export class MessagesService {
-    messagesRepo: MessagesRepository;
-
-    constructor() {
+    constructor(public messagesRepo: MessagesRepository) {
         // DONT TO THIS ON REAL APPS
-        this.messagesRepo = new MessagesRepository;
+        // this.messagesRepo = new MessagesRepository;
+        
     }
 
     findOne(id: string) {
